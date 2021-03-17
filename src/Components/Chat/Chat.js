@@ -53,7 +53,7 @@ const room = useSelector((state) => state.chat.roomToJoin);
         setUsers(users.users);
       });
     }
-  }, [token, room, username, users]);
+  }, [token, room, username]);
 
   
 

@@ -27,8 +27,6 @@ export const loginFail = (err) => ({
 
 
 
-
-// login thunk
 export const loginThunk = (loginFormData) => {
   const { email, password, room } = loginFormData;
   console.log(email)
@@ -61,7 +59,6 @@ export const signupFail = (err) => ({
   payload: err,
 });
 
-// signup thunk
 
 export const signupThunk = (signupFormData) => {
   const { email, username, password, room } = signupFormData;

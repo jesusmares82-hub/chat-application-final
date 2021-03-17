@@ -12,10 +12,11 @@
     justify-content: space-between;
     background: #ffffff;
     border-radius: 8px;
-    height: 60%;
-    width: 35%; 
+    height: 100%;
+    width: 100%; 
     grid-row: 2 / 3;
     grid-column: 2 / 4;
+    border-right: 2px solid #d3d3d3;
   }
   
   @media (min-width: 320px) and (max-width: 480px) {
@@ -39,7 +40,7 @@
   .grid {
     display: grid;
     grid-template-columns: 300px auto;
-    grid-template-rows: 120px 620px 100px;
-    height: 200%;
+    grid-template-rows: 63px 620px 60px;
+    height: 50%;
   }
   
