@@ -16,16 +16,14 @@ export default function SignIn() {
   const access = useSelector((state) => state.chat.access);
 
   useEffect(() => {
-    console.log(access);
-   if (access) {
+    if (access) {
       history.push("/chat");
     }
   }, [access, history]);
 
   const onSubmit = (data) => {
-    console.log(data);
-    dispatch(loginThunk(data));
-    console.log(access)
+     dispatch(loginThunk(data));
+    
   };
   return (
     <div className="joinOuterContainer">

@@ -17,16 +17,14 @@ const SignUp = () => {
   const access = useSelector((state) => state.chat.access);
 
   useEffect(() => {
-    console.log(access)
-    if (access) {
+     if (access) {
       history.push("/chat");
     }
   }, [access, history]);
 
   const onSubmit = (data) => {
-    console.log(data);
     dispatch(signupThunk(data));
-    console.log(access)
+    
   };
   return (
     <div className="joinOuterContainer">

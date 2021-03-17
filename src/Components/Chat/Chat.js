@@ -24,16 +24,14 @@ const room = useSelector((state) => state.chat.roomToJoin);
 
   
   useEffect(() => {
-    console.log(token);
-    console.log(username);
-    if (token && username) {
+     if (token && username) {
       socket = io(ENDPOINT, {
         query: {
           token
         }
       });
 
-      console.log(socket)
+      
 
       socket.on("error", (err) => console.log(err));
 
@@ -44,12 +42,12 @@ const room = useSelector((state) => state.chat.roomToJoin);
       });
 
       socket.on("message", (message) => {
-        console.log(message);
+        
         setMessages((messages) => [...messages, message]);
       });
       
       socket.on("roomData", (users) => {
-        console.log(users.users)
+        
         setUsers(users.users);
       });
     }
@@ -59,11 +57,11 @@ const room = useSelector((state) => state.chat.roomToJoin);
 
   const sendMessage = (event) => {
     event.preventDefault();
-     console.log(message)
+    
      
     if (message) {
       socket.emit("sendMessage", message, () => setMessage(""));
-      console.log("Se envio el mensaje")
+      
     }
   };
 

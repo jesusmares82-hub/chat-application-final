@@ -29,8 +29,7 @@ export const loginFail = (err) => ({
 
 export const loginThunk = (loginFormData) => {
   const { email, password, room } = loginFormData;
-  console.log(email)
-  console.log(password)
+  
   return (dispatch) => {
     dispatch(login(room));
 
